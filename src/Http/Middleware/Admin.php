@@ -1,0 +1,135 @@
+<?php
+
+namespace MicroweberPackages\Admin\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use MicroweberPackages\Admin\Events\ServingAdmin;
+use MicroweberPackages\User\Models\User;
+use function mw_is_installed;
+use function optional;
+use function redirect;
+use function route;
+
+class Admin
+{
+    /**
+     * The routes that should be excluded from verification.
+     *
+     * @var array
+     */
+    protected $except = [
+        'admin.login.*',
+        'admin.reset.*',
+    ];
+
+    /**
+     * Handle an incoming request.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
+     * @return \Illuminate\Http\Response
+     */
+    public function handle(Request $request, Closure $next)
+    {
+
+
+     //   $adminUser = Auth::guard('admin')->user();
+       // dd($adminUser);
+
+       // return $next($request);
+
+        //todo
+//
+//        if ($adminUser &&  $adminUser->is_admin == 1) {
+//            return $next($request);
+//        }
+
+        if (is_admin()) {
+            return $next($request);
+        }
+
+
+
+        if (!mw_is_installed()) {
+            return redirect(site_url());
+        }
+
+        ServingAdmin::dispatch();
+
+        event_trigger('mw.admin');
+        event_trigger('mw_backend');
+
+
+        if ($this->requestIsInIframe($request)) {
+            view()->share('isIframe', true);
+        } else {
+            view()->share('isIframe', false);
+        }
+
+        if ($this->inExceptArray($request) || (Auth::check() && intval(Auth::user()->is_admin) === 1)) {
+
+            if(defined('MW_VERSION')) {
+                app()->update->perform_post_update_if_needed();
+            }
+             return $next($request);
+        }
+
+        $hasNoAdmin = User::where('is_admin', 1)->limit(1)->count();
+        if (!$hasNoAdmin) {
+            return redirect(site_url());
+        }
+
+        $adminUrl = admin_url();
+        $urlToCompare = site_url('admin');
+
+        // Respond with JSON for API clients instead of a login redirect. is_ajax()
+        // only detects X-Requested-With; expectsJson() also covers callers that send
+        // `Accept: application/json` (REST/fetch clients) — otherwise they'd receive a
+        // 302 to the HTML login page instead of a machine-readable error.
+        if (is_ajax() || $request->expectsJson()) {
+            $status = (Auth::check() ? 403 : 401);
+
+            return response()->json(['error' => 'Please as admin login to continue'], $status);
+        }
+
+//        if($adminUrl == $urlToCompare){
+//           // return redirect()->guest(route('admin.login'));
+//            return redirect(site_url());
+//        }
+        // must not redirect to admin because it will reveal the admin url if its custom
+      //   return redirect(site_url());
+
+       //  return redirect()->guest(route('admin.login'));
+         return redirect()->guest($adminUrl . 'login');
+    }
+    private function requestIsInIframe($request)
+    {
+
+        $secFetchDest = $request->header('Sec-Fetch-Dest');
+
+        if ($secFetchDest == 'iframe') {
+            return true;
+        }
+    }
+
+    /**
+     * Determine if the request URI is in except array.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return bool
+     */
+    protected function inExceptArray($request)
+    {
+        foreach ($this->except as $except) {
+            $routeName = optional($request->route())->getName();
+
+            if (preg_match("/{$except}/", $routeName)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
