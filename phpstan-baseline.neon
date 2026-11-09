@@ -13,98 +13,14 @@ parameters:
 			path: src/Filament/FilamentAdminPanelProvider.php
 
 		-
-			message: '#^Call to an undefined static method MicroweberPackages\\Filament\\Plugins\\MicroweberFilamentSocialitePlugin\:\:make\(\)\.$#'
-			identifier: staticMethod.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method defaultLayout\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method displayToggleAction\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method gridLayoutButtonIcon\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method listLayoutButtonIcon\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method shareLayoutBetweenPages\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to method toggleActionHook\(\) on an unknown class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to static method make\(\) on an unknown class MicroweberPackages\\CdnSync\\Filament\\CdnSyncPlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to static method make\(\) on an unknown class MicroweberPackages\\ImageOptimization\\Filament\\ImageOptimizationPlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Call to static method make\(\) on an unknown class MicroweberPackages\\Queue\\Filament\\QueuePlugin\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Class Modules\\Content\\Filament\\Admin\\ContentResource\\Pages\\ListContents not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Class Modules\\Post\\Filament\\Admin\\Resources\\PostResource\\Pages\\ListPosts not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Class Modules\\Product\\Filament\\Admin\\Resources\\ProductResource\\Pages\\ListProducts not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
-			message: '#^Function mw not found\.$#'
-			identifier: function.notFound
-			count: 3
-			path: src/Filament/FilamentAdminPanelProvider.php
-
-		-
 			message: '#^Function mw_admin_prefix_url not found\.$#'
 			identifier: function.notFound
 			count: 3
 			path: src/Filament/FilamentAdminPanelProvider.php
 
 		-
-			message: '#^Instantiated class Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin not found\.$#'
-			identifier: class.notFound
+			message: '#^Method Hydrat\\TableLayoutToggle\\TableLayoutTogglePlugin\:\:defaultLayout\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
 			count: 1
 			path: src/Filament/FilamentAdminPanelProvider.php
 
@@ -118,12 +34,6 @@ parameters:
 			message: '#^Call to an undefined static method MicroweberPackages\\Option\\Models\\Option\:\:whereIn\(\)\.$#'
 			identifier: staticMethod.notFound
 			count: 1
-			path: src/Filament/Pages/Abstract/AdminSettingsPage.php
-
-		-
-			message: '#^Function save_option not found\.$#'
-			identifier: function.notFound
-			count: 2
 			path: src/Filament/Pages/Abstract/AdminSettingsPage.php
 
 		-
@@ -145,26 +55,8 @@ parameters:
 			path: src/Filament/Pages/Login.php
 
 		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$content_manager\.$#'
+			message: '#^Access to an undefined property MicroweberPackages\\App\\LaravelApplication\:\:\$update\.$#'
 			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$parser\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$template_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Access to property \$update on an unknown class MicroweberPackages\\App\\LaravelApplication\.$#'
-			identifier: class.notFound
 			count: 1
 			path: src/Http/Controllers/AdminController.php
 
@@ -187,32 +79,8 @@ parameters:
 			path: src/Http/Controllers/AdminController.php
 
 		-
-			message: '#^Class MicroweberPackages\\App\\Http\\Middleware\\AllowedIps not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
 			message: '#^Function modules_path not found\.$#'
 			identifier: function.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Function mw not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Function mw_is_installed not found\.$#'
-			identifier: function.notFound
-			count: 2
-			path: src/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Property MicroweberPackages\\Admin\\Http\\Controllers\\AdminController\:\:\$app has unknown class MicroweberPackages\\App\\LaravelApplication as its type\.$#'
-			identifier: class.notFound
 			count: 1
 			path: src/Http/Controllers/AdminController.php
 
@@ -224,12 +92,6 @@ parameters:
 
 		-
 			message: '#^Access to an undefined property Illuminate\\Contracts\\Auth\\Authenticatable\:\:\$is_admin\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Middleware/Admin.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$update\.$#'
 			identifier: property.notFound
 			count: 1
 			path: src/Http/Middleware/Admin.php
@@ -253,18 +115,6 @@ parameters:
 			path: src/Http/Middleware/Admin.php
 
 		-
-			message: '#^Function is_admin not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/Http/Middleware/Admin.php
-
-		-
-			message: '#^Function mw_is_installed not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/Http/Middleware/Admin.php
-
-		-
 			message: '#^Method MicroweberPackages\\Admin\\Http\\Middleware\\Admin\:\:handle\(\) should return Illuminate\\Http\\Response but returns Illuminate\\Http\\JsonResponse\.$#'
 			identifier: return.type
 			count: 1
@@ -283,63 +133,15 @@ parameters:
 			path: src/Http/Middleware/Admin.php
 
 		-
-			message: '#^Used function mw_is_installed not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/Http/Middleware/Admin.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$template_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Services/AdminManager.php
-
-		-
 			message: '#^Function _e not found\.$#'
 			identifier: function.notFound
 			count: 1
 			path: src/resources/views/layout.blade.php
 
 		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$content_repository\.$#'
-			identifier: property.notFound
-			count: 2
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$module_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
-			message: '#^Function content_create_link not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
-			message: '#^Function content_edit_link not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
-			message: '#^Function get_content_by_id not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
 			message: '#^Function modules_url not found\.$#'
 			identifier: function.notFound
 			count: 4
-			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
-
-		-
-			message: '#^Function url_param not found\.$#'
-			identifier: function.notFound
-			count: 2
 			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
 
 		-
@@ -355,22 +157,10 @@ parameters:
 			path: src/resources/views/layouts/partials/add-content-buttons.blade.php
 
 		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$ui\.$#'
-			identifier: property.notFound
-			count: 3
-			path: src/resources/views/layouts/partials/copyright.blade.php
-
-		-
 			message: '#^Constant MW_VERSION not found\.$#'
 			identifier: constant.notFound
 			count: 1
 			path: src/resources/views/layouts/partials/copyright.blade.php
-
-		-
-			message: '#^Function mw_admin_footer_scripts not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/footer.blade.php
 
 		-
 			message: '#^Function _ejs not found\.$#'
@@ -391,18 +181,6 @@ parameters:
 			path: src/resources/views/layouts/partials/header.blade.php
 
 		-
-			message: '#^Function get_user_by_id not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
-			message: '#^Function is_logged not found\.$#'
-			identifier: function.notFound
-			count: 2
-			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
 			message: '#^Function is_shop_module_enabled_for_user not found\.$#'
 			identifier: function.notFound
 			count: 1
@@ -413,30 +191,6 @@ parameters:
 			identifier: function.notFound
 			count: 1
 			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
-			message: '#^Function mw_admin_header_scripts not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
-			message: '#^Function url_param not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
-			message: '#^Function user_id not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/header.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$template_manager\.$#'
-			identifier: property.notFound
-			count: 2
-			path: src/resources/views/layouts/partials/loads-user-custom-fonts.blade.php
 
 		-
 			message: '#^Function current_lang not found\.$#'
@@ -481,46 +235,10 @@ parameters:
 			path: src/resources/views/layouts/partials/navbar-bottom-menu.blade.php
 
 		-
-			message: '#^Function get_username_short not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/navbar-bottom-menu.blade.php
-
-		-
-			message: '#^Function user_name not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/navbar-bottom-menu.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$ui\.$#'
-			identifier: property.notFound
-			count: 4
-			path: src/resources/views/layouts/partials/navbar.blade.php
-
-		-
 			message: '#^Function admin_url not found\.$#'
 			identifier: function.notFound
 			count: 1
 			path: src/resources/views/layouts/partials/navbar.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$content_manager\.$#'
-			identifier: property.notFound
-			count: 6
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$module_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$ui\.$#'
-			identifier: property.notFound
-			count: 4
-			path: src/resources/views/layouts/partials/topbar.blade.php
 
 		-
 			message: '#^Call to static method has\(\) on an unknown class Route\.$#'
@@ -541,45 +259,9 @@ parameters:
 			path: src/resources/views/layouts/partials/topbar.blade.php
 
 		-
-			message: '#^Function is_admin not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Function session_get not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Function url_param not found\.$#'
-			identifier: function.notFound
-			count: 2
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Function user_can_access not found\.$#'
-			identifier: function.notFound
-			count: 2
-			path: src/resources/views/layouts/partials/topbar.blade.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$module_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/resources/views/layouts/partials/topbar2-links-left-default.blade.php
-
-		-
 			message: '#^Function modules_url not found\.$#'
 			identifier: function.notFound
 			count: 1
-			path: src/resources/views/layouts/partials/topbar2-links-left-default.blade.php
-
-		-
-			message: '#^Function url_param not found\.$#'
-			identifier: function.notFound
-			count: 2
 			path: src/resources/views/layouts/partials/topbar2-links-left-default.blade.php
 
 		-
@@ -593,9 +275,3 @@ parameters:
 			identifier: function.notFound
 			count: 1
 			path: src/routes/admin.php
-
-		-
-			message: '#^Function mw not found\.$#'
-			identifier: function.notFound
-			count: 4
-			path: src/routes/api.php
