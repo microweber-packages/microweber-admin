@@ -318,6 +318,14 @@ class FilamentAdminPanelProvider extends PanelProvider
 
             ])
             ->navigationItems([
+                // A native "Live Edit" sidebar nav item (eye icon), at the very top
+                // of the sidebar above Dashboard. The green Live Edit BUTTON stays
+                // in the topbar; this is the additional nav link, rendered as a
+                // normal Filament nav item so it matches the other items exactly.
+                NavigationItem::make('Live Edit')
+                    ->url(fn (): string => site_url('?editmode=y'))
+                    ->icon('heroicon-o-eye')
+                    ->sort(-100),
            /*     NavigationItem::make('E-mail Marketing')
                     ->url(admin_url('newsletter'))
                     ->group('Other')
@@ -381,9 +389,8 @@ class FilamentAdminPanelProvider extends PanelProvider
                 . '</div>'
         );
 
-        // Live Edit stays in the right cluster (GLOBAL_SEARCH_AFTER); the
-                // follow-up — render +Add in the mobile drawer instead of hiding it
-                // 44px touch floor on mobile.)
+        // The green Live Edit CTA stays in the right topbar cluster (where it has
+        // always been), alongside the quick-nav search.
         $panel->renderHook(
             name: PanelsRenderHook::GLOBAL_SEARCH_AFTER,
             hook: fn(): string => '<div class="mw-admin-primary-actions">'
@@ -391,6 +398,10 @@ class FilamentAdminPanelProvider extends PanelProvider
                 . '</div>'
                 . view('admin::livewire.filament.search-quick-nav')->render()
         );
+
+        // (The "Live Edit" sidebar nav item is a native Filament NavigationItem —
+        // see ->navigationItems() above — so it renders identically to the other
+        // sidebar items, with the standard icon size.)
 
                 // state into `localStorage.admin_sidebar_mode` so the designer-spec
         // key is present alongside Filament's native persistence.
